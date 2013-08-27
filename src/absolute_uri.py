@@ -2,7 +2,10 @@
 
 from __future__ import unicode_literals
 
-import urlparse
+try:
+    from urlparse import urljoin
+except ImportError:
+    from urllib.parse import urljoin
 
 from django.contrib.sites.models import get_current_site
 
@@ -11,7 +14,7 @@ def add_domain(path, domain, secure=False):
     if path.startswith("http://") or path.startswith("https://"):
         return path
     domain = ("https://" if secure else "http://") + domain
-    return urlparse.urljoin(domain, path)
+    return urljoin(domain, path)
 
 
 def build_site_url(path, request=None):
