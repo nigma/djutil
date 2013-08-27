@@ -1,0 +1,4 @@
+djutil
+======
+
+Common django utilities
