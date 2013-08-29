@@ -3,7 +3,6 @@
 
 from setuptools import setup
 
-
 version = "0.1"
 
 setup(
@@ -25,14 +24,12 @@ setup(
     include_package_data=True,
     classifiers=(
         "Development Status :: 4 - Beta",
-        "Environment :: Console",
         "Environment :: Web Environment",
         "Framework :: Django",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.2",
         "Programming Language :: Python :: 3.3",
