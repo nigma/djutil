@@ -8,14 +8,14 @@ import random
 
 from django.db import models
 from django.utils import six
-from django.utils.encoding import force_str
+from django.utils.encoding import force_bytes
 from django.utils.timezone import now as tznow
 
 
 def generate_hash(string, salt=None):
     if salt is None:
-        salt = hashlib.sha1(force_str(random.random())).hexdigest()[:5]
-    hash = hashlib.sha1(force_str(salt) + force_str(string)).hexdigest()
+        salt = hashlib.sha1(force_bytes(random.random())).hexdigest()[:5]
+    hash = hashlib.sha1(force_bytes(salt) + force_bytes(string)).hexdigest()
     return salt, hash
 
 
